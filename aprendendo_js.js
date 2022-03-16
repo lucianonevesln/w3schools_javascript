@@ -83,8 +83,30 @@ As funcoes abaixo alteram a imagem para produzir um efeito de acender e apagar u
 
 function acenderLuz () {
     document.getElementById('teste2').src = 'pic_bulbon.gif'
-}
+};
 
 function desligarLuz () {
     document.getElementById('teste2').src = 'pic_bulboff.gif'
-}
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/*
+
+As funcoes abaixo altera a estilizacao
+
+- style.display: altera o que esta sendo apresentado;
+
+- style.backgroundColor: altera o fundo da estrutura;
+
+*/
+
+function mudarEstilo () {
+    document.getElementById('teste3').style.display = 'none'    
+};
+
+function mudarCor () {
+    document.getElementById('teste4').style.backgroundColor = 'green'
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
