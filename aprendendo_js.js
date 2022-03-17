@@ -185,8 +185,10 @@ function executarCalculo () {
         resultado = valor1 / valor2
     } else if (operacao == 'somar') {
         resultado = valor1 + valor2
-    } else {
+    } else if (operacao == 'subtrair') {
         resultado = valor1 - valor2
+    } else {
+        return document.getElementById('teste6').innerHTML = 'Escolha uma operacao!'
     }
 
     // retorna o resultado da operacao
