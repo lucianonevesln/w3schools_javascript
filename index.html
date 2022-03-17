@@ -29,11 +29,40 @@
     <h1>Pode alterar um estilo</h1>
     <p id="teste3">Essa frase vai desaparecer quando você apertar o botão...</p>
     <button id="teste3" onclick="mudarEstilo()">Aperte Aqui: sumir</button>
+    <p id="teste5" style="display:none">Obrigado por me fazer aparecer</p>
+    <button id="teste5" onclick="mostrarTexto()">Aperte Aqui: mostrar</button>
     <p id="teste4">Essa frase vai ficar com fundo verde quando você apertar o botão...</p>
     <button id="teste4" onclick="mudarCor()">Aperte Aqui: colorir</button>
 
     <h1>---------------------------------------------------------------------------------------------------</h1>
 
+    <h1>Output</h1>
+
+    <h2>Função: innerHTML()</h2>
+
+    <form action="">
+
+        <label for="valor1">Valor 1:</label>
+        <input type="text" id="valor1"><br><br>
+        <label for="valor2">Valor 2:</label>
+        <input type="text" id="valor2"><br><br>
+
+        <label for="operacao">Operação: </label>
+        <select name="operacao" id="operacao">
+            <option value=""></option>
+            <option value="multiplicar">Multiplica</option>
+            <option value="dividir">Dividir</option>
+            <option value="somar">Somar</option>
+            <option value="subtrair">Subtrair</option>
+        </select><br><br>
+
+    </form>
+
+    <button type="button" onclick="executarCalculo()" id="teste6">Pressione Aqui</button>
+
+    <h1>---------------------------------------------------------------------------------------------------</h1>
+
     <script src="aprendendo_js.js"></script>
+
 </body>
 </html>

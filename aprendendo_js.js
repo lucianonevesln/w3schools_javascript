@@ -109,4 +109,87 @@ function mudarCor () {
     document.getElementById('teste4').style.backgroundColor = 'green'
 };
 
+function mostrarTexto () {
+    document.getElementById('teste5').style.display = 'block'
+};
+
 /* --------------------------------------------------------------------------------------------------------------- */
+
+/*
+
+* JavaScript tag <script>
+
+Para utilizar o JavaScript em HTML e necessario inserir seu script na tag <script></script>.
+
+Ele pode ser inserido em qualquer parte do script HTML. Mas ele tambem pode vir de uma aquivo externo, que inclusive,
+permite o uso por diversas paginas. Para inserir-lo basta utilizar o atributo "src" dentro da tag <script></script>.
+
+* Vantagens do Uso Externo
+
+- Separa o codigo HTML do JS;
+
+- E mais facil para ler e manter os codigos;
+
+- Cache de arquivo JavaScript pode ficar mais rapido para carregar;
+
+* Referencia Externa
+
+Pode ser feita de 3 maneiras:
+
+- De qualquer URL da web: <script src="https://www.w3schools.com/js/myScript.js"></script>;
+
+- De diretorio local: <script src="/js/myScript.js"></script>;
+
+- Do propio diretorio: <script src="myScript.js"></script>;
+
+* Funcao JavaScript
+
+A funcao em JavaScript e um bloco de codigo que pode ser reutilizado inumeras vezes ao ser invocada/chamada.
+
+* Event JavaScript
+
+Pode ser criado uma funcao que ao ser invocada/chamada se comporta de uma determinada maneira ao ser clicada pelo usuario.
+
+* Output
+
+O JavaScript pode mostrar uma informacao de diversas formas:
+
+- innerHTML(): dentro do elemento HTML;
+
+- document.write(): escrevendo um output;
+
+- window.alert(): mostrando um box em janela;
+
+- console.log(): mostrando no console;
+
+*/
+
+/*
+
+A funcao abaixo utiliza o innerHTML().
+
+*/
+
+function executarCalculo () {
+
+    // defini variaveis a partir do HTML
+    var valor1 = Number(document.getElementById('valor1').value);
+    var valor2 = Number(document.getElementById('valor2').value);
+    var operacao = document.getElementById('operacao').value;
+    var resultado = 0;
+
+    // identifica e executa a operacao matematica
+    if (operacao == 'multiplicar') {
+        resultado = valor1 * valor2
+    } else if (operacao == 'dividir' && valor2 != 0) {
+        resultado = valor1 / valor2
+    } else if (operacao == 'somar') {
+        resultado = valor1 + valor2
+    } else {
+        resultado = valor1 - valor2
+    }
+
+    // retorna o resultado da operacao
+    return document.getElementById('teste6').innerHTML = resultado;
+
+};
