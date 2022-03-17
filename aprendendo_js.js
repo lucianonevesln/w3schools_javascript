@@ -195,3 +195,16 @@ function executarCalculo () {
     return document.getElementById('teste6').innerHTML = resultado;
 
 };
+
+/*
+
+A funcao abaixo utiliza o write() e direciona o usuario para um ambiente em que se pode mostrar o output.
+
+*/
+
+function mostrarEmOutroAmbiente () {
+
+    document.write('<h1>Deu certo</h1>')
+    document.write('<a href="index.html"><button>Volte por aqui</button></a>')
+
+};
