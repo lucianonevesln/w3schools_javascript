@@ -55,8 +55,10 @@ A funcao abaixo retorna uma data e hora do momento que o sistema estiver sendo e
 
 */
 
-function dataHoraAgora () { 
-    document.getElementById('teste0').innerHTML = Date()
+function dataHoraAgora () {
+
+    document.getElementById('teste0').innerHTML = Date();
+
  };
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -68,7 +70,9 @@ A funcao abaixo altera um texto escrito e inicializado pelo HTML
 */
 
 function mudarTexto () {
-    document.getElementById('teste1').innerHTML = "Veja como fui alterado."
+
+    document.getElementById('teste1').innerHTML = "Veja como fui alterado.";
+
 };
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -82,11 +86,15 @@ As funcoes abaixo alteram a imagem para produzir um efeito de acender e apagar u
 */
 
 function acenderLuz () {
-    document.getElementById('teste2').src = 'pic_bulbon.gif'
+
+    document.getElementById('teste2').src = 'pic_bulbon.gif';
+
 };
 
 function desligarLuz () {
-    document.getElementById('teste2').src = 'pic_bulboff.gif'
+
+    document.getElementById('teste2').src = 'pic_bulboff.gif';
+
 };
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -102,15 +110,21 @@ As funcoes abaixo altera a estilizacao
 */
 
 function mudarEstilo () {
-    document.getElementById('teste3').style.display = 'none'    
+
+    document.getElementById('teste3').style.display = 'none';
+
 };
 
 function mudarCor () {
-    document.getElementById('teste4').style.backgroundColor = 'green'
+
+    document.getElementById('teste4').style.backgroundColor = 'green';
+
 };
 
 function mostrarTexto () {
-    document.getElementById('teste5').style.display = 'block'
+
+    document.getElementById('teste5').style.display = 'block';
+
 };
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -204,8 +218,8 @@ A funcao abaixo utiliza o write() e direciona o usuario para um ambiente em que 
 
 function mostrarEmOutroAmbiente () {
 
-    document.write('<h1>Deu certo</h1>')
-    document.write('<a href="index.html"><button>Volte por aqui</button></a>')
+    document.write('<h1>Deu certo</h1>');
+    document.write('<a href="index.html"><button>Volte por aqui</button></a>');
 
 };
 
@@ -249,5 +263,18 @@ function descobrirImc () {
                  + imc
                  + '. O status desse IMC é '
                  + resultado);
+
+};
+
+/*
+
+A funcao abaixo utiliza o console.log() e mostra em console do browser um output.
+
+*/
+
+function descubraConsoleLog () {
+
+    document.getElementById('teste9').innerHTML = 'Agora, pressione a tecla F12 e vá até a aba Console...';
+    console.log('Obrigado por me encontrar aqui...');
 
 };
