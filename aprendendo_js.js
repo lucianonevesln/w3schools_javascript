@@ -208,3 +208,46 @@ function mostrarEmOutroAmbiente () {
     document.write('<a href="index.html"><button>Volte por aqui</button></a>')
 
 };
+
+/*
+
+A funcao abaixo utiliza o window.alert() e mostra uma janela com o output.
+
+*/
+
+function descobrirImc () {
+
+    // definicao de variaveis
+    var nome = document.getElementById('nome').value;
+    var peso = Number(document.getElementById('peso').value);
+    var altura = Number(document.getElementById('altura').value);
+    var resultado = "";
+
+    // calculo de imc e tratamento de casas decimais
+    var imc = parseFloat(peso / (altura * altura)).toFixed(2);
+
+    // estrutura para verificacao de status de massa corporal
+    switch (true) {
+        case imc < 18.5:
+            resultado = 'MAGREZA (abaixo do peso).';
+            break;
+        case imc >= 18.5 && imc <= 24.9:
+            resultado = 'NORMAL (peso ideal).';
+            break;
+        case imc > 24.9 && imc < 30:
+            resultado = 'SOBREPESO (acima do peso).';
+            break;
+        case imc > 30:
+            resultado = 'OBESIDADE (procure um especialista).';
+            break;
+    };
+
+    // mensagem para usuario com seu imc
+    window.alert('Olá, '
+                 + nome
+                 + '. Seu IMC é de '
+                 + imc
+                 + '. O status desse IMC é '
+                 + resultado);
+
+};
