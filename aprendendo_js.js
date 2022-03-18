@@ -392,16 +392,28 @@ function mostrarTextoDois () {
     var teste13 = document.getElementById('teste13').value;
     var teste14 = document.getElementById('teste14').value;
 
-    // armazena uma string de complementacao do texte que sera apresentado
-    var concatenar0 = " : transformei tudo em uma única string, não é legal?!"
+    if (teste13 != "" && teste14 != "") {
 
-    // efetua de fato a concatenacao
-    var concatenar1 = teste13 + " " + teste14 + " "+ concatenar0;
+        // armazena uma string de complementacao do texte que sera apresentado
+        var concatenar0 = " : transformei tudo em uma única string, não é legal?!"
 
-    // atribui o texto concatenado a uma tag escondida do index.html
-    document.getElementById('teste15').innerHTML =  concatenar1;
+        // efetua de fato a concatenacao
+        var concatenar1 = teste13 + " " + teste14 + " "+ concatenar0;
 
-    // mostra a tag escondida no HTML
-    document.getElementById('teste15').style.display = 'block';
+        // atribui o texto concatenado a uma tag escondida do index.html
+        document.getElementById('teste15').innerHTML =  concatenar1;
+
+        // mostra a tag escondida no HTML
+        document.getElementById('teste15').style.display = 'block';
+
+    } else {
+
+        // atribui o texto concatenado a uma tag escondida do index.html
+        document.getElementById('teste15').innerHTML = "Por favor, preencha os 2 campos acima!"
+
+        // mostra a tag escondida no HTML
+        document.getElementById('teste15').style.display = 'block';
+
+    }
 
 };
