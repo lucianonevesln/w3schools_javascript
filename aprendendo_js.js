@@ -278,3 +278,130 @@ function descubraConsoleLog () {
     console.log('Obrigado por me encontrar aqui...');
 
 };
+
+/*
+
+Programas JavaScript
+
+Um programa de computador e uma lista de instrucoes que devem ser excutadas po um computador. Em linguagem
+de programcao essas instrucoes sao chamadas de declaracao.
+
+Declaracao (statements) JavaScript
+
+A declaracao/statements JavaScript e composta por:
+
+- Valores;
+
+- Operadores;
+
+- Expressoes;
+
+- Palavras-chaves;
+
+- Comentarios;
+
+Essas statements sao executadas na ordem em que sao escritas. Os multiplicos espacos em branco sao ignorados.
+Num linha de codigo muito longa e que o programador prefere quebrar essa linha, o JS ira executar a continuacao
+ne eventual outra linha.
+
+Blocos de Codigo JavaScript
+
+A declaracao JS pode ser agrupada toda em bloco de codigo dentro de { ... }. O proposito de um bloco de codigo e
+definir uma instrucao que sera executada em conjunto. Um lugar para se colocar uma declaracao/script agrupada e
+em um funcao (function).
+
+A declaracao JavaScript muitas vezes se inicia com palavras-chave para identificar uma acao que o JS deve tomar
+dentro da performance.
+
+Valores JavaScript
+
+A sintaxe de JS permite criar 2 tipos de valores: fixos (tambem chamados de literal) e variveis.
+
+- Literal: Numbers pode ser escrito com decimais e String com "" ou ''.
+
+- Variaveis: em programacao se armazenamento por variavel. Em JS e possivel declarar de 3 maneiras: let, var e const.
+O sinal de = atribui um valor a uma variavel.
+
+Operadores Aritmeticos: / * - +;
+
+Expressoes: se podem combinar valores, variaveis, operadores que manipula valores. Tambem e possivel concatenar cadeias
+de caracteres atraves do operador +.
+
+Variaveis JavaScript
+
+Variaveis sao containers que armazenam dados (valores).
+
+- var: e usada em todo o codigo desde 1995;
+
+- let e const: foram adicionadas em 2015
+
+Para que o codigo seja executada em qualquer versao de browser, deve ser utilizada o var.
+
+Se quiser utilizar uma regra geral de variavel, deve-se usar o const.
+
+Se quiser uma variavel que podera ser alterada, usa-se o let.
+
+Variaveis devem ser unicas. Sua declaracao deve respeitar:
+
+- Pode se usar letrar, digitos, sublinhados e cifra;
+
+- O nomes devem comecar com letras;
+
+- Os nomes sao case sensitive, ou seja, A e a sao diferentes;
+
+- Palavras reservadas nao podem ser usadas;
+
+Para declara a variavel deve ser invocado o var ou let antes do seu nome. Em caso de nao haver valor, e dito que essa variavel
+e undefined e a atribuicao de valor se como dito anteriormente por meio do sinal de =.
+
+*/
+
+/*
+
+Abaixo, ha funcoes que trazem detalhes de cada tipo de variavel.
+
+*/
+
+function variavelCont () {
+
+    document.getElementById('teste10').innerHTML = "Essa variavel jamais será alterada!"
+
+};
+
+function variavelLet () {
+
+    window.alert("Essa variável pode ser alterada e foi implementada a partir de 2015.")
+
+};
+
+function variavelVar () {
+
+    window.alert("Essa variavel pode ser alterada e deve ser usada quando sua aplicação rodar em browser mais antigos por ela existe desde 1995.")
+
+};
+
+/*
+
+Abaixo, ha uma funcao que recebe alguns valores do front-end e retorna uma string concatenada.
+
+*/
+
+function mostrarTextoDois () {
+
+    // recebe valores do front-end e armazena em variaveis
+    var teste13 = document.getElementById('teste13').value;
+    var teste14 = document.getElementById('teste14').value;
+
+    // armazena uma string de complementacao do texte que sera apresentado
+    var concatenar0 = " : transformei tudo em uma única string, não é legal?!"
+
+    // efetua de fato a concatenacao
+    var concatenar1 = teste13 + " " + teste14 + " "+ concatenar0;
+
+    // atribui o texto concatenado a uma tag escondida do index.html
+    document.getElementById('teste15').innerHTML =  concatenar1;
+
+    // mostra a tag escondida no HTML
+    document.getElementById('teste15').style.display = 'block';
+
+};
