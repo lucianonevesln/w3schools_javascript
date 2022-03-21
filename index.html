@@ -123,6 +123,44 @@
 
     <h1>---------------------------------------------------------------------------------------------------</h1>
 
+    <h2>Variável "const" em Array: </h2>
+
+    <label for="">Escreva uma palavra: </label>
+    <input type="text" id="palavra"><br><br>
+    <button type="button" onclick="inserirPalavra()">Inserir Palavra</button><br>
+    <h2 id="exibir" style="display:none"></h2><br>
+    <button type="button" onclick="mostrarPalavras()">Mostrar Palavras</button><br><br>
+    <button type="button" onclick="esconderPalavras()">Esconder Palavras</button>
+
+    <h1>---------------------------------------------------------------------------------------------------</h1>
+
+    <h2>Operadores Matemáticos</h2>
+
+    <select name="escolherOperacao" id="escolherOperacao">
+        <option value=""></option>
+        <option value="+">Adição</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="**">Exponenciação</option>
+        <option value="/">Divisão</option>
+        <option value="%">Dovisão: modulo</option>
+    </select><br>
+
+    <h2 id="mensagem" style="display: none"></h2><br>
+
+    <button type="button" onclick="mostrarLabelInput()">Enter</button><br><br>
+
+    <label for="" id="label1" style="display: none">Valor 1:</label>
+    <input type="text" id="inputValor1" style="display: none"><br><br>
+    <label for="" id="label2" style="display: none">Valor 2:</label>
+    <input type="text" id="inputValor2" style="display: none"><br>
+
+    <button type="button" id="botao" onclick="efetuarCalculo()" style="display: none">Enter</button>
+
+    <h2 id="resultado" style="display: none"></h2>
+
+    <h1>---------------------------------------------------------------------------------------------------</h1>
+
     <script src="aprendendo_js.js"></script>
 
 </body>

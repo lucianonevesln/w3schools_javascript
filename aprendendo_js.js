@@ -417,3 +417,154 @@ function mostrarTextoDois () {
     }
 
 };
+
+/*
+
+JavaScript let
+
+Variaveis com let nao podem ser redeclaradas.
+
+Escopo de Bloco
+
+Uma variavel declarada como let dentro de um determinado escopo nao pode ser usada fora dele, por exemplo:
+
+{
+    x = 10;
+    console.log(x); // aqui pode ser usada
+};
+
+= nao pode ser lido aqui
+
+Agora, se a declaracao ocorrer por var, ai e possivel, por exemplo:
+
+{
+    x = 10;
+    console.log(x);
+};
+
+console.log(x);
+
+Tambem e possivel fazer a redeclaracao dessa variavel tanto dentro do escopo do bloco quanto fora.
+
+JavaScript const
+
+Variaveis const nao podem ser redeclaradas e reassinadas.
+
+Escopo de Bloco
+
+Tambem tem uma comportamento semelhante ao de let no que diz respeito ao scopo de bloco.
+
+const x = 100;
+
+{
+    const x = 500;
+    console.log(x);
+};
+
+console.log(x);
+
+*/
+
+// Criando const de array que pode ter seu consteu modificado
+const listaPalavras = [];
+
+// funcacao para inserir palavra no array
+function inserirPalavra() {
+
+    // variavel que recebe palavra do front-end
+    palavra = document.getElementById('palavra').value;
+
+    // funcao que adiciona palavra ao array
+    listaPalavras.push(palavra);
+
+};
+
+// funcao para mostrar palavras no arry
+function mostrarPalavras () {
+
+    // seleciona as palavras que serao mostradas em front-end
+    document.getElementById('exibir').innerHTML = listaPalavras;
+
+    // mostra palavras no front-end
+    document.getElementById('exibir').style.display = 'block';
+
+};
+
+// funcao que esconde as palavras do front-end
+function esconderPalavras () {
+
+    // esconde palavras do front-end
+    document.getElementById('exibir').style.display = 'none';
+
+};
+
+// funcao que mostra labes e inputs ou mensagem solicitando que o usuario esolha operacao correta
+function mostrarLabelInput () {
+
+    // declaracao de variavel
+    var escolherOperacao = document.getElementById('escolherOperacao').value;
+
+    // verificacao de escolha de operacao pelo usuario
+    if (escolherOperacao != "") {
+
+        // mostra relacao labels e inputs para interacao do usuario
+        document.getElementById('mensagem').style.display = 'none';
+        document.getElementById('label1').style.display = 'block';
+        document.getElementById('inputValor1').style.display = 'block';
+        document.getElementById('label2').style.display = 'block';
+        document.getElementById('inputValor2').style.display = 'block';
+        document.getElementById('botao').style.display = 'block';
+
+    } else {
+
+        // retorna uma mensagem em tag escondida no HTML
+        document.getElementById('mensagem').innerHTML = 'Escolha uma operação!';
+        document.getElementById('mensagem').style.display = 'block';
+
+    };
+
+};
+
+// funcao para efetuar o calculo
+function efetuarCalculo () {
+
+    // recebe as os valores definidos no front-end pelo usuario
+    var escolherOperacao = document.getElementById('escolherOperacao').value;
+    var inputValor1 = Number(document.getElementById('inputValor1').value);
+    var inputValor2 = Number(document.getElementById('inputValor2').value);
+    var resultado = 0;
+
+    // valida se a operacao e de divisao por 0
+    if (inputValor2 == 0 && (escolherOperacao == '/' || escolherOperacao == '%')) {
+        document.getElementById('resultado').innerHTML = "Valor 2 inválido. Por favor, digite um número válido para essa operação.";
+        document.getElementById('resultado').style.display = 'block';
+    } else {
+        // seleciona o operador matematico de acordo com a escolha do usuario e efetua o calculo
+        switch (true) {
+            case escolherOperacao == '+':
+                resultado = inputValor1 + inputValor2;
+                break;
+            case escolherOperacao == '-':
+                resultado = inputValor1 - inputValor2;
+                break;
+            case escolherOperacao == '*':
+                resultado = inputValor1 * inputValor2;
+                break;
+            case escolherOperacao == '**':
+                resultado = inputValor1 ** inputValor2;
+                break;
+            case escolherOperacao == '/':
+                resultado = inputValor1 / inputValor2;
+                break;
+            case escolherOperacao == '%' && inputValor2 != 0:
+                resultado = inputValor1 % inputValor2;
+                break;
+        };
+
+        // retorna resultado em tag escondida no HTML
+        document.getElementById('resultado').innerHTML = "Resultado: " + resultado;
+        document.getElementById('resultado').style.display = 'block';
+
+    };
+
+};
