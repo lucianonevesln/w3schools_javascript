@@ -680,3 +680,28 @@ function operadorLogicoNegacao () {
     document.write('<a href="index.html"><button>Volte por aqui</button></a>');
 
 };
+
+// funcao que recebe parametros e concatena palavras
+function concatenandoPalavras (palavra1, palavra2) {
+
+    // retorna a concatenacao
+    return palavra1 + " " + palavra2;
+
+};
+
+// funcao que e executada quando o front-end e acionado
+function usandoFuncaoParametros () {
+
+    // recebe os valores digitados no front-end, atribui valores a variaveis e cria variavel vazia
+    let funcaoPalavra1 = document.getElementById('funcaoPalavra1').value;
+    let funcaoPalavra2 = document.getElementById('funcaoPalavra2').value;
+    let retornoConcateno = '';
+
+    // invoca/chama funcao que fara a concatenacao das palavras
+    retornoConcateno = concatenandoPalavras(funcaoPalavra1, funcaoPalavra2);
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('retornandoConcateno').innerHTML = retornoConcateno;
+    document.getElementById('retornandoConcateno').style.display = 'block';
+
+};
