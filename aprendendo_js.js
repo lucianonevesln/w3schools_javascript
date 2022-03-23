@@ -568,3 +568,93 @@ function efetuarCalculo () {
     };
 
 };
+
+/*
+
+Alem dos operadores aritmeticos acima, existem no JavaScript os seguintes operadores
+de incremento e decremento:
+
+++ -> trata-se de um operador de atribuicao, por exemplo:
+
+let x = 1;
+
+x ++; -> neste caso, toda vez que este script for executado, sera somado o numero 1 ao
+         valor de x;
+
+let y = 10;
+
+y --; -> neste caso, toda vez que este script for executado, sera subtraido o numero 1 do
+         valor de y;
+
+Operadores de Atribuicao
+
+= -> atribui um valor a uma variavel;
+
++= -> soma um valor de uma variavel a outra variavel;
+
+-= -> soma um valor de uma variavel a outra variavel;
+
+*= -> multiplica um valor de uma variavel e atribuo outra variavel;
+
+/= -> divide um valor de uma variavel e atribui outra variavel;
+
+%= -> divide na modularizacao um valor de uma variavel e atribui outra variavel;
+
+**= -> multiplica um valor em exponenciacao de uma variavel e atribui outra variavel;
+
+*/
+
+// traz explicacao sobre cada um dos operadores de comparacao
+function operadorComparacao () {
+
+    // recebe valor do front-end, atrabui a uma variavel e cria uma variavel vazia
+    let varOperador = document.getElementById('operadorComparar').value;
+    let retornoOperador = '';
+
+    // verifica qual o operador de comparacao escolhido pelo usuario e retorna uma explicacao
+    switch (true) {
+        case varOperador == 'todos':
+            retornoOperador =  ("==  : verifica se as expressoes sao iguais;<br><br>" +
+                                "=== : verifica se os tipos das expressoes sao iguais;<br><br>" +
+                                "!=  : verifica se as expressoes sao diferentes;<br><br>" +
+                                "!== : verifica se os tipos das expressoes sao diferentes;<br><br>" +
+                                ">   : verifica se a expressao da esquerda e maior que a da direita;<br><br>" +
+                                "<   : verifica se a expressao da esquerda e menor que a da direita;<br><br>" +
+                                ">=  : verifica se a expressao da esquerda e maior ou igual que a da direita;<br><br>" +
+                                "<=  : verifica se a expressao da esquerda e menor ou igual que a da direita;<br><br>" +
+                                "?   : operador ternario;\n");
+            break;
+        case varOperador == "==":
+            retornoOperador = "verifica se as expressoes sao iguais;";
+            break;
+        case varOperador == "===":
+            retornoOperador = "verifica se os tipos das expressoes sao iguais;";
+            break;
+        case varOperador == "!=":
+            retornoOperador = "verifica se as expressoes sao diferentes";
+            break;
+        case varOperador == "!==":
+            retornoOperador = "verifica se os tipos das expressoes sao diferentes;";
+            break;
+        case varOperador == ">":
+            retornoOperador = "verifica se a expressao da esquerda e maior que a da direita;";
+            break;
+        case varOperador == "<":
+            retornoOperador = "verifica se a expressao da esquerda e menor que a da direita;";
+            break;
+        case varOperador == ">=":
+            retornoOperador = "verifica se a expressao da esquerda e maior ou igual que a da direita;";
+            break;
+        case varOperador == "<=":
+            retornoOperador = "verifica se a expressao da esquerda e menor ou igual que a da direita;";
+            break;
+        case varOperador == "?":
+            retornoOperador = "operador ternario;";
+            break;
+    };
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('resultadoOperador').innerHTML = retornoOperador;
+    document.getElementById('resultadoOperador').style.display = 'block';
+
+};
