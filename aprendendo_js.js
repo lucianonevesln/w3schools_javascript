@@ -658,3 +658,25 @@ function operadorComparacao () {
     document.getElementById('resultadoOperador').style.display = 'block';
 
 };
+
+// as 3 funcoes abixo trazem explicacao sobre cada um dos operadores logicos
+function operadorLogicoE () {
+
+    document.write("<h2>Este operador compara expressoes e retorna TRUE apenas se todos os valores forem verdadeiros</h2>");
+    document.write('<a href="index.html"><button>Volte por aqui</button></a>');
+
+};
+
+function operadorLogicoOu () {
+
+    document.write("<h2>Este operador compara expressoes e retorna FALSE apenas se todos os valores forem falsos</h2>");
+    document.write('<a href="index.html"><button>Volte por aqui</button></a>');
+
+};
+
+function operadorLogicoNegacao () {
+
+    document.write("<h2>Este operador retorna o inverso da expressao</h2>");
+    document.write('<a href="index.html"><button>Volte por aqui</button></a>');
+
+};
