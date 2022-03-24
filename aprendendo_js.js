@@ -705,3 +705,125 @@ function usandoFuncaoParametros () {
     document.getElementById('retornandoConcateno').style.display = 'block';
 
 };
+
+/*
+
+Loop "for"
+
+*/
+
+// criando array
+let armazenandoPalavras1 = [];
+
+// funcao para armazenar palavra no array
+function guardarPalavra1 () {
+
+    // criando variavel que recebe valor do front-end
+    let recebendoPalavra1 = document.getElementById('recebendoPalavra1').value;
+
+    // estrutura para armazenar palavra no array
+    armazenandoPalavras1.push(recebendoPalavra1);
+
+};
+
+// funcao que exibe as palavras em linha
+function exibirPalavras1 () {
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('palavrasEscondidas1').innerHTML = armazenandoPalavras1;
+    document.getElementById('palavrasEscondidas1').style.display = 'block';
+
+};
+
+// funcao que exibe palavras uma embaixo da outra
+function exibirPalavrasFor1 () {
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavra1 = 0; palavra1 < armazenandoPalavras1.length; palavra1++) {
+
+        // coleta palavra no for, adiciona em tag escondida no HTML e retorna esse resultado nessa tag
+        document.getElementById('palavrasEscondidasFor1').innerHTML += armazenandoPalavras1[palavra1] + '<br>';
+        document.getElementById('palavrasEscondidasFor1').style.display = 'block';
+
+    };
+
+};
+
+// funcao para exibir posicoes ocupadas pelos nomes inseridos no array
+function exibirPosicoesFor1 () {
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavraPos1 = 0; palavraPos1 < armazenandoPalavras1.length; palavraPos1++) {
+
+        // coleta palavra no for, adiciona em tag escondida no HTML e retorna esse resultado nessa tag
+        document.getElementById('posicoesEscondidasFor1').innerHTML += [palavraPos1] + '<br>';
+        document.getElementById('posicoesEscondidasFor1').style.display = 'block';
+
+    };
+
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+// criando array
+let armazenandoPalavras2 = [];
+
+// funcao para armazenar palavra no array
+function guardarPalavra2 () {
+
+    // criando variavel que recebe valor do front-end
+    let recebendoPalavra2 = document.getElementById('recebendoPalavra2').value;
+
+    // estrutura para armazenar palavra no array
+    armazenandoPalavras2.push(recebendoPalavra2);
+
+};
+
+// funcao que exibe as palavras em linha
+function exibirPalavras2 () {
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('palavrasEscondidas2').innerHTML = armazenandoPalavras2;
+    document.getElementById('palavrasEscondidas2').style.display = 'block';
+
+};
+
+// funcao que exibe palavras uma embaixo da outra
+function exibirPalavrasFor2 () {
+
+    // criando variavel para receber palavras enviadas pelo for
+    let listaComPalavras = '';
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavra2 = 0; palavra2 < armazenandoPalavras2.length; palavra2++) {
+
+        // script para coletar cada palavra gerada no for e armazenar em variavel de apresentacao
+        listaComPalavras += armazenandoPalavras2[palavra2] + '<br>';
+
+    };
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('palavrasEscondidasFor2').innerHTML = listaComPalavras;
+    document.getElementById('palavrasEscondidasFor2').style.display = 'block';
+
+};
+
+// funcao para exibir posicoes ocupadas pelos nomes inseridos no array
+function exibirPosicoesFor2 () {
+
+    // criando variavel para receber palavras enviadas pelo for
+    let listaComPalavras = '';
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavraPos2 = 0; palavraPos2 < armazenandoPalavras2.length; palavraPos2++) {
+
+        // script para coletar cada palavra gerada no for e armazenar em variavel de apresentacao
+        listaComPalavras += [palavraPos2] + '<br>';
+
+    };
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('posicoesEscondidasFor2').innerHTML = listaComPalavras;
+    document.getElementById('posicoesEscondidasFor2').style.display = 'block';
+
+};
