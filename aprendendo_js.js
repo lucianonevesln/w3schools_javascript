@@ -710,6 +710,30 @@ function usandoFuncaoParametros () {
 
 Loop "for"
 
+Loops sao uteis, se voce for exercutar o mesmo codigo varias e varias vezes cada vez com diferentes
+valores.
+
+Muitas vezes se usa esse recurso quando se trabalha com arrays.
+
+O loop for conta com a seguinte syntaxe:
+
+for (statement 1; statement 1; statement 1) {
+    blo que script;
+};
+
+- statement 1: e executado uma vez antes de se chegar ao bloco de codigo, pode ser omitido, ou seja,
+nao necessariamente deve ser implementado, e pode ser iniciado assim let i = 0;
+
+- statement 2: define uma condicao para execucao do bloco e tambem e opcional. O teste sera executado;
+
+- statement 3: e executado toda vez apos a execucao do bloco e tambem e opcional;
+
+"for in"
+
+Esse for percorre cada propriedade de um objeto.
+
+"array.forEach"
+
 */
 
 // criando array
@@ -744,6 +768,20 @@ function exibirPalavrasFor1 () {
         // coleta palavra no for, adiciona em tag escondida no HTML e retorna esse resultado nessa tag
         document.getElementById('palavrasEscondidasFor1').innerHTML += armazenandoPalavras1[palavra1] + '<br>';
         document.getElementById('palavrasEscondidasFor1').style.display = 'block';
+
+    };
+
+};
+
+// funcao que exibe palavras uma embaixo da outra
+function exibirPalavrasForIn1 () {
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavraIn in armazenandoPalavras1) {
+
+        // coleta palavra no for, adiciona em tag escondida no HTML e retorna esse resultado nessa tag
+        document.getElementById('palavrasEscondidasForIn1').innerHTML += armazenandoPalavras1[palavraIn] + '<br>';
+        document.getElementById('palavrasEscondidasForIn1').style.display = 'block';
 
     };
 
@@ -805,6 +843,26 @@ function exibirPalavrasFor2 () {
     // retorna resultado em tag escondida no HTML
     document.getElementById('palavrasEscondidasFor2').innerHTML = listaComPalavras;
     document.getElementById('palavrasEscondidasFor2').style.display = 'block';
+
+};
+
+// funcao que exibe palavras uma embaixo da outra
+function exibirPalavrasForIn2 () {
+
+    // criando variavel para receber palavras enviadas pelo for
+    let listaComPalavrasIn = '';
+
+    // estrutura for que permite passar por todas as palavras do array
+    for (let palavraIn2 in armazenandoPalavras2) {
+
+        // script para coletar cada palavra gerada no for e armazenar em variavel de apresentacao
+        listaComPalavrasIn += armazenandoPalavras2[palavraIn2] + '<br>';
+
+    };
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('palavrasEscondidasForIn2').innerHTML = listaComPalavrasIn;
+    document.getElementById('palavrasEscondidasForIn2').style.display = 'block';
 
 };
 
