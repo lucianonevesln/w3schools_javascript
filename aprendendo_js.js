@@ -734,6 +734,9 @@ Esse for percorre cada propriedade de um objeto.
 
 "array.forEach"
 
+Com ele e possivel criar uma estrutura para percorrer um array e chama-la posteriormente, percorrendo cada
+elemento desse array.
+
 */
 
 // criando array
@@ -784,6 +787,23 @@ function exibirPalavrasForIn1 () {
         document.getElementById('palavrasEscondidasForIn1').style.display = 'block';
 
     };
+
+};
+
+// funcao que e executada quando o usuario pressiona o botao correspondente no front-end
+function chamandoForEach1 () {
+
+    // aplicando forEach que executa funcao criada abaixo
+    armazenandoPalavras1.forEach(criandoForEach1);
+
+};
+
+// funcao que cria o forEach que sera executado
+function criandoForEach1 (value, index, array) {
+
+    // coleta palavra no for, adiciona em tag escondida no HTML e retorna esse resultado nessa tag
+    document.getElementById('palavrasEscondidasForEach1').innerHTML += value + '<br>';
+    document.getElementById('palavrasEscondidasForEach1').style.display = 'block';
 
 };
 
@@ -863,6 +883,29 @@ function exibirPalavrasForIn2 () {
     // retorna resultado em tag escondida no HTML
     document.getElementById('palavrasEscondidasForIn2').innerHTML = listaComPalavrasIn;
     document.getElementById('palavrasEscondidasForIn2').style.display = 'block';
+
+};
+
+// funcao que e executada quando o usuario pressiona o botao correspondente no front-end
+function chamandoForEach2 () {
+
+    // criando variavel para receber palavras enviadas pelo for
+    listaForEach = '';
+
+    // aplicando forEach que executa funcao criada abaixo
+    armazenandoPalavras2.forEach(criandoForEach2);
+
+    // retorna resultado em tag escondida no HTML
+    document.getElementById('palavrasEscondidasForEach2').innerHTML = listaForEach;
+    document.getElementById('palavrasEscondidasForEach2').style.display = 'block';
+
+};
+
+// funcao que cria o forEach que sera executado
+function criandoForEach2 (value, index, array) {
+
+    // coleta palavra no valor, adiciona em variavel
+    listaForEach += [value] + '<br>';
 
 };
 
