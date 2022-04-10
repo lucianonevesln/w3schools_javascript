@@ -250,6 +250,75 @@
 
     <h1>---------------------------------------------------------------------------------------------------</h1>
 
+    <h2>JavaScript Objeto</h2>
+
+    <h2>Preencha os campos abaixo</h2>
+    <label for="">Nome: </label><input type="text" id="objetoNome"><br><br>
+    <label for="">Sobrenome: </label><input type="text" id="objetoSobrenome"><br><br>
+    <label for="">Idade: </label><input type="text" id="objetoIdade"><br><br>
+    <input type="button" value="Enter" id="objetoPessoa"><br><br>
+
+    <form action="script.js" id="idFormescolhaObjeto">
+        <h2>Como quer ver o objeto?</h2>
+        <input type="radio" name="escolhaObjeto" value="valorObjetoCompleto"><label for="">Objeto por: completo</label><br><br>
+        <input type="radio" name="escolhaObjeto" value="valorObjetoPrimeiroNome"><label for="">Objeto por: primeiro nome</label><br><br>
+        <input type="radio" name="escolhaObjeto" value="valorObjetoSobrenome"><label for="">Objeto por: sobrenome</label><br><br>
+        <input type="radio" name="escolhaObjeto" value="valorObjetoIdade"><label for="">Objeto por: idade</label><br><br>
+        <input type="submit" value="Enter" id="idSubmitEscolhaObjeto"><br><br>
+    </form>
+
+    <table border="1" id="tabelaObjeto" style="display: none">
+        <thead>
+            <tr>
+                <th style="background-color: darkgrey;">Chave</th>
+                <th style="background-color: darkgrey;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th style="text-align: left">Nome: </th><th id="tabelaObjetoNome"></th></tr>
+            <tr><th style="text-align: left">Sobrenome: </th><th id="tabelaObjetoSobrenome"></th></tr>
+            <tr><th style="text-align: left">Idade: </th><th id="tabelaObjetoIdade"></th></tr>
+        </tbody>
+    </table><br>
+
+    <table border="1" id="tabelaNome" style="display: none">
+        <thead>
+            <tr>
+                <th style="background-color: darkgrey;">Chave</th>
+                <th style="background-color: darkgrey;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th style="text-align: left">Nome: </th><th id="tabelaObjetoIdNome"></th></tr>
+        </tbody>
+    </table><br>
+
+    <table border="1" id="tabelaSobrenome" style="display: none">
+        <thead>
+            <tr>
+                <th style="background-color: darkgrey;">Chave</th>
+                <th style="background-color: darkgrey;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th style="text-align: left">Sobrenome: </th><th id="tabelaObjetoIdSobrenome"></th></tr>
+        </tbody>
+    </table><br>
+
+    <table border="1" id="tabelaIdade" style="display: none">
+        <thead>
+            <tr>
+                <th style="background-color: darkgrey;">Chave</th>
+                <th style="background-color: darkgrey;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th style="text-align: left">Idade: </th><th id="tabelaObjetoIdIdade"></th></tr>
+        </tbody>
+    </table>
+
+    <h1>---------------------------------------------------------------------------------------------------</h1>
+
     <script src="aprendendo_js.js"></script>
 
 </body>

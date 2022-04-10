@@ -928,3 +928,151 @@ function exibirPosicoesFor2 () {
     document.getElementById('posicoesEscondidasFor2').style.display = 'block';
 
 };
+
+/*
+
+JavaScrip Object
+
+Em JS, objetos sao reis. Se voce entende eles, entende JS.
+
+- Booleanos podem ser objetos (se forem definidos com a palavra-chave new);
+
+- Numeros podem ser objetos (se forem definidos com a palavra-chave new);
+
+- Strings podem ser objetos (se forem definidos com a palavra-chave new);
+
+- Datas sempre sao objetos;
+
+- Matematicas sempre serao objetos;
+
+- Expressoes regulares sempre serao objetos;
+
+- Arrays sempre serao objetos;
+
+- Funcoes sempre serao objetos;
+
+- Objetos sempre serao objetos;
+
+Todos os valore em JavaScript, excessoes primitivas, sao objetos.
+
+JavaScript Primitivo
+
+Um valor primitivo e um valor que nao tem propriedades ou metodos. 7 sao
+os tipos primitivos em JS:
+
+- string;
+
+- number;
+
+- boolean;
+
+- null;
+
+- undefined;
+
+- symbol
+
+- bigint;
+
+OBS: valores primitivos sao imutaveis.
+
+Objetos sao Variaveis
+
+Variaveis JS podem conter valores singulares, como uma variavel a qual e
+atribuido um determinado valor.
+
+Variaveis JS tambem podem conter varios valores, exemplo:
+
+let pessoa = {primeiroNome: 'Luciano', sobreNome: 'Neves', idade: 32}
+
+*/
+
+// armazena o comportamento do botao ao ser pressionado
+var botaoPessoa = document.querySelector("#objetoPessoa");
+
+// escuta comportamento de botao pressionado e executa funcao com script definido
+botaoPessoa.addEventListener('click', function() {
+
+    // armazena valores digitados pelo usuario
+    var objetoNome = document.querySelector('#objetoNome').value;
+    var objetoSobrenome = document.querySelector('#objetoSobrenome').value;
+    var objetoIdade = document.querySelector('#objetoIdade').value;
+
+    // condicional para validar se todos os campos pedidos foram preenchidos
+    if (objetoNome != '' && objetoSobrenome != '' && objetoIdade != '') {
+
+        // cria um objeto JavaScript
+        var objetoPessoa = {objetoNome, objetoSobrenome, objetoIdade};
+
+        // armazena o comportamento do botao ao ser pressionado
+        var botaoidSubmitEscolhaObjeto = document.querySelector('#idSubmitEscolhaObjeto');
+
+        // escuta comportamento de botao pressionado e executa funcao com script definido
+        botaoidSubmitEscolhaObjeto.addEventListener('click', function(Event) {
+
+            // previne o comportamento padrao do JS
+            Event.preventDefault();
+
+            // recebe o valor passado por radio-button escolhido pelo usuario
+            var objetoPessoaRetorno = document.querySelector('input[name="escolhaObjeto"]:checked').value;
+
+            // condicional para verificar qual valor foi escolhido pelo usuario e definir a resposta
+            if (objetoPessoaRetorno == 'valorObjetoCompleto') {
+                mostrarTabela(objetoPessoa);
+            } else if (objetoPessoaRetorno == 'valorObjetoPrimeiroNome') {
+                mostrarTabelaNome(objetoPessoa);
+            } else if (objetoPessoaRetorno == 'valorObjetoSobrenome') {
+                mostrarTabelaSobrenome(objetoPessoa);
+            } else {
+                mostrarTabelaIdade(objetoPessoa);
+            };
+
+        });
+
+    } else {
+
+        // mensagem informando que falta preencher valor(es) pelo usuario, com botao para retorno
+        document.write('<h2>Por favor, preencha todos os campos solicitado.</h2>');
+        document.write('<a href="index.html"><button>Volte por aqui</button></a>');
+
+    };
+
+});
+
+// funcao para mostrar todos os campos da tabela
+function mostrarTabela (objetoPessoa) {
+
+    // mostra todos os objetos da tabela
+    document.querySelector('#tabelaObjetoNome').innerHTML = objetoPessoa.objetoNome;
+    document.querySelector('#tabelaObjetoSobrenome').innerHTML = objetoPessoa.objetoSobrenome;
+    document.querySelector('#tabelaObjetoIdade').innerHTML = objetoPessoa.objetoIdade;
+    document.querySelector('#tabelaObjeto').style.display = 'table';
+
+};
+
+// funcao para mostrar o nome
+function mostrarTabelaNome (objetoPessoa) {
+
+    // mostra o objeto nome e tabela
+    document.querySelector('#tabelaObjetoIdNome').innerHTML = objetoPessoa.objetoNome;
+    document.querySelector('#tabelaNome').style.display = 'table';
+
+};
+
+// funcao para mostrar o sobrenome
+function mostrarTabelaSobrenome (objetoPessoa) {
+
+    // mostra o objeto sobrenome e tabela
+    document.querySelector('#tabelaObjetoIdSobrenome').innerHTML = objetoPessoa.objetoSobrenome;
+    document.querySelector('#tabelaSobrenome').style.display = 'table';
+
+};
+
+// funcao para mostrar a idade
+function mostrarTabelaIdade (objetoPessoa) {
+
+    // mostra o objeto idade e tabela
+    document.querySelector('#tabelaObjetoIdIdade').innerHTML = objetoPessoa.objetoIdade;
+    document.querySelector('#tabelaIdade').style.display = 'table';
+
+};
