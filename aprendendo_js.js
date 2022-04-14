@@ -135,8 +135,9 @@ function mostrarTexto () {
 
 Para utilizar o JavaScript em HTML e necessario inserir seu script na tag <script></script>.
 
-Ele pode ser inserido em qualquer parte do script HTML. Mas ele tambem pode vir de uma aquivo externo, que inclusive,
-permite o uso por diversas paginas. Para inserir-lo basta utilizar o atributo "src" dentro da tag <script></script>.
+Ele pode ser inserido em qualquer parte do script HTML. Mas ele tambem pode vir de uma aquivo externo,
+que inclusive, permite o uso por diversas paginas. Para inserir-lo basta utilizar o atributo "src" dentro
+da tag <script></script>.
 
 * Vantagens do Uso Externo
 
@@ -162,7 +163,8 @@ A funcao em JavaScript e um bloco de codigo que pode ser reutilizado inumeras ve
 
 * Event JavaScript
 
-Pode ser criado uma funcao que ao ser invocada/chamada se comporta de uma determinada maneira ao ser clicada pelo usuario.
+Pode ser criado uma funcao que ao ser invocada/chamada se comporta de uma determinada maneira ao ser clicada
+pelo usuario.
 
 * Output
 
@@ -177,6 +179,8 @@ O JavaScript pode mostrar uma informacao de diversas formas:
 - console.log(): mostrando no console;
 
 */
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -210,6 +214,8 @@ function executarCalculo () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 /*
 
 A funcao abaixo utiliza o write() e direciona o usuario para um ambiente em que se pode mostrar o output.
@@ -222,6 +228,8 @@ function mostrarEmOutroAmbiente () {
     document.write('<a href="index.html"><button>Volte por aqui</button></a>');
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -266,6 +274,8 @@ function descobrirImc () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 /*
 
 A funcao abaixo utiliza o console.log() e mostra em console do browser um output.
@@ -278,6 +288,8 @@ function descubraConsoleLog () {
     console.log('Obrigado por me encontrar aqui...');
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -300,18 +312,18 @@ A declaracao/statements JavaScript e composta por:
 
 - Comentarios;
 
-Essas statements sao executadas na ordem em que sao escritas. Os multiplicos espacos em branco sao ignorados.
-Num linha de codigo muito longa e que o programador prefere quebrar essa linha, o JS ira executar a continuacao
-ne eventual outra linha.
+Essas statements sao executadas na ordem em que sao escritas. Os multiplicos espacos em branco sao
+ignorados. Numa linha de codigo muito longa e que o programador prefere quebrar essa linha, o JS ira
+executar a continuacao outra linha.
 
 Blocos de Codigo JavaScript
 
-A declaracao JS pode ser agrupada toda em bloco de codigo dentro de { ... }. O proposito de um bloco de codigo e
-definir uma instrucao que sera executada em conjunto. Um lugar para se colocar uma declaracao/script agrupada e
-em um funcao (function).
+A declaracao JS pode ser agrupada toda em bloco de codigo dentro de { ... }. O proposito de um bloco
+de codigo e definir uma instrucao que sera executada em conjunto. Um lugar para se colocar uma
+declaracao/script agrupada e em um funcao (function).
 
-A declaracao JavaScript muitas vezes se inicia com palavras-chave para identificar uma acao que o JS deve tomar
-dentro da performance.
+A declaracao JavaScript muitas vezes se inicia com palavras-chave para identificar uma acao que o JS
+deve tomar dentro da performance.
 
 Valores JavaScript
 
@@ -319,13 +331,14 @@ A sintaxe de JS permite criar 2 tipos de valores: fixos (tambem chamados de lite
 
 - Literal: Numbers pode ser escrito com decimais e String com "" ou ''.
 
-- Variaveis: em programacao se armazenamento por variavel. Em JS e possivel declarar de 3 maneiras: let, var e const.
+- Variaveis: em programacao se armazenamento por variavel. Em JS e possivel declarar de 3 maneiras:
+let, var e const.
 O sinal de = atribui um valor a uma variavel.
 
 Operadores Aritmeticos: / * - +;
 
-Expressoes: se podem combinar valores, variaveis, operadores que manipula valores. Tambem e possivel concatenar cadeias
-de caracteres atraves do operador +.
+Expressoes: se podem combinar valores, variaveis, operadores que manipula valores. Tambem e possivel
+concatenar cadeias de caracteres atraves do operador +.
 
 Variaveis JavaScript
 
@@ -351,10 +364,13 @@ Variaveis devem ser unicas. Sua declaracao deve respeitar:
 
 - Palavras reservadas nao podem ser usadas;
 
-Para declara a variavel deve ser invocado o var ou let antes do seu nome. Em caso de nao haver valor, e dito que essa variavel
+Para declara a variavel deve ser invocado o var ou let antes do seu nome. Em caso de nao haver valor,
+e dito que essa variavel
 e undefined e a atribuicao de valor se como dito anteriormente por meio do sinal de =.
 
 */
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -364,21 +380,23 @@ Abaixo, ha funcoes que trazem detalhes de cada tipo de variavel.
 
 function variavelCont () {
 
-    document.getElementById('teste10').innerHTML = "Essa variavel jamais será alterada!"
+    document.getElementById('teste10').innerHTML = "Essa variavel jamais será alterada!";
 
 };
 
 function variavelLet () {
 
-    window.alert("Essa variável pode ser alterada e foi implementada a partir de 2015.")
+    window.alert("Essa variável pode ser alterada e foi implementada a partir de 2015.");
 
 };
 
 function variavelVar () {
 
-    window.alert("Essa variavel pode ser alterada e deve ser usada quando sua aplicação rodar em browser mais antigos por ela existe desde 1995.")
+    window.alert("Essa variavel pode ser alterada e deve ser usada quando sua aplicação rodar em browser mais antigos por ela existe desde 1995.");
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -395,7 +413,7 @@ function mostrarTextoDois () {
     if (teste13 != "" && teste14 != "") {
 
         // armazena uma string de complementacao do texte que sera apresentado
-        var concatenar0 = " : transformei tudo em uma única string, não é legal?!"
+        var concatenar0 = " : transformei tudo em uma única string, não é legal?!";
 
         // efetua de fato a concatenacao
         var concatenar1 = teste13 + " " + teste14 + " "+ concatenar0;
@@ -409,14 +427,16 @@ function mostrarTextoDois () {
     } else {
 
         // atribui o texto concatenado a uma tag escondida do index.html
-        document.getElementById('teste15').innerHTML = "Por favor, preencha os 2 campos acima!"
+        document.getElementById('teste15').innerHTML = "Por favor, preencha os 2 campos acima!";
 
         // mostra a tag escondida no HTML
         document.getElementById('teste15').style.display = 'block';
 
-    }
+    };
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -465,6 +485,8 @@ console.log(x);
 
 */
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // Criando const de array que pode ter seu consteu modificado
 const listaPalavras = [];
 
@@ -479,6 +501,8 @@ function inserirPalavra() {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao para mostrar palavras no arry
 function mostrarPalavras () {
 
@@ -490,6 +514,8 @@ function mostrarPalavras () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que esconde as palavras do front-end
 function esconderPalavras () {
 
@@ -497,6 +523,8 @@ function esconderPalavras () {
     document.getElementById('exibir').style.display = 'none';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao que mostra labes e inputs ou mensagem solicitando que o usuario esolha operacao correta
 function mostrarLabelInput () {
@@ -524,6 +552,8 @@ function mostrarLabelInput () {
     };
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao para efetuar o calculo
 function efetuarCalculo () {
@@ -569,6 +599,8 @@ function efetuarCalculo () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 /*
 
 Alem dos operadores aritmeticos acima, existem no JavaScript os seguintes operadores
@@ -603,6 +635,8 @@ Operadores de Atribuicao
 **= -> multiplica um valor em exponenciacao de uma variavel e atribui outra variavel;
 
 */
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // traz explicacao sobre cada um dos operadores de comparacao
 function operadorComparacao () {
@@ -659,7 +693,9 @@ function operadorComparacao () {
 
 };
 
-// as 3 funcoes abixo trazem explicacao sobre cada um dos operadores logicos
+/* --------------------------------------------------------------------------------------------------------------- */
+
+// as 3 funcoes abaixo trazem explicacao sobre cada um dos operadores logicos
 function operadorLogicoE () {
 
     document.write("<h2>Este operador compara expressoes e retorna TRUE apenas se todos os valores forem verdadeiros</h2>");
@@ -681,6 +717,8 @@ function operadorLogicoNegacao () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que recebe parametros e concatena palavras
 function concatenandoPalavras (palavra1, palavra2) {
 
@@ -688,6 +726,8 @@ function concatenandoPalavras (palavra1, palavra2) {
     return palavra1 + " " + palavra2;
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao que e executada quando o front-end e acionado
 function usandoFuncaoParametros () {
@@ -705,6 +745,8 @@ function usandoFuncaoParametros () {
     document.getElementById('retornandoConcateno').style.display = 'block';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -739,6 +781,8 @@ elemento desse array.
 
 */
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // criando array
 let armazenandoPalavras1 = [];
 
@@ -753,6 +797,8 @@ function guardarPalavra1 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que exibe as palavras em linha
 function exibirPalavras1 () {
 
@@ -761,6 +807,8 @@ function exibirPalavras1 () {
     document.getElementById('palavrasEscondidas1').style.display = 'block';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao que exibe palavras uma embaixo da outra
 function exibirPalavrasFor1 () {
@@ -776,6 +824,8 @@ function exibirPalavrasFor1 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que exibe palavras uma embaixo da outra
 function exibirPalavrasForIn1 () {
 
@@ -790,6 +840,8 @@ function exibirPalavrasForIn1 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que e executada quando o usuario pressiona o botao correspondente no front-end
 function chamandoForEach1 () {
 
@@ -797,6 +849,8 @@ function chamandoForEach1 () {
     armazenandoPalavras1.forEach(criandoForEach1);
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao que cria o forEach que sera executado
 function criandoForEach1 (value, index, array) {
@@ -806,6 +860,8 @@ function criandoForEach1 (value, index, array) {
     document.getElementById('palavrasEscondidasForEach1').style.display = 'block';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao para exibir posicoes ocupadas pelos nomes inseridos no array
 function exibirPosicoesFor1 () {
@@ -837,6 +893,8 @@ function guardarPalavra2 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que exibe as palavras em linha
 function exibirPalavras2 () {
 
@@ -845,6 +903,8 @@ function exibirPalavras2 () {
     document.getElementById('palavrasEscondidas2').style.display = 'block';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao que exibe palavras uma embaixo da outra
 function exibirPalavrasFor2 () {
@@ -866,6 +926,8 @@ function exibirPalavrasFor2 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que exibe palavras uma embaixo da outra
 function exibirPalavrasForIn2 () {
 
@@ -886,6 +948,8 @@ function exibirPalavrasForIn2 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que e executada quando o usuario pressiona o botao correspondente no front-end
 function chamandoForEach2 () {
 
@@ -901,6 +965,8 @@ function chamandoForEach2 () {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao que cria o forEach que sera executado
 function criandoForEach2 (value, index, array) {
 
@@ -908,6 +974,8 @@ function criandoForEach2 (value, index, array) {
     listaForEach += [value] + '<br>';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao para exibir posicoes ocupadas pelos nomes inseridos no array
 function exibirPosicoesFor2 () {
@@ -928,6 +996,8 @@ function exibirPosicoesFor2 () {
     document.getElementById('posicoesEscondidasFor2').style.display = 'block';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 /*
 
@@ -978,14 +1048,59 @@ OBS: valores primitivos sao imutaveis.
 
 Objetos sao Variaveis
 
-Variaveis JS podem conter valores singulares, como uma variavel a qual e
-atribuido um determinado valor.
+Variaveis JS podem conter valores singulares, como uma variavel a qual e atribuido um determinado
+valor.
 
 Variaveis JS tambem podem conter varios valores, exemplo:
 
 let pessoa = {primeiroNome: 'Luciano', sobreNome: 'Neves', idade: 32}
 
+Objetos sao variaveis tambem, mas objetos podem conter varios valores.
+
+O objeto JavaScript e uma colecao de nomes e valores e e uma pratica comum declarar esse conjunto
+como uma palavra-chave const.
+
+A nomeacao e uma propriedade e o valor esta associado a ela.
+
+Objetos Metodos
+
+Sao acoes que podem exercer performance sobre os objetos. Objetos podem ser ambos valores primitivos,
+outros objetos e/ou funcoes. Metodo objeto contem uma funcao definida.
+
+Objetos JS sao containers de nomes e valores, chamados de propriedades e metodos.
+
+Criando um Objeto JavaScript
+
+Com o JavaScript voce pode criar seus objetos.
+
+Existem diferentes maneiras para se criar novos objetos:
+
+- Na criacao de objeto singular: pode-se cria objeto literal;
+
+- Na criacao de objeto singular: pode-se criar com a palavra-chave new;
+
+- Definindo um construtor, e ele cria objetos na construcao de tipos;
+
+- Criando um objeto usando o Object.create();
+
+Usando o Objeto Literal
+
+Esse e a maneira mais facil para criar um objeto JS. Usando o objeto literal voce tem ambos recursos:
+criacao e definicao do objeto. E uma lista de pares nome:valor dentro de uma estrutura de {}, conforme
+exemplo:
+
+const pessoa = {primeiroNome: 'Luciano', sobreNome: 'Neves', idade: 32}
+
+Usando a palavra-chave new Object()
+
+const pessoa = new Object();
+pessoa.primeiroNome = 'Luciano';
+pessoa.sobreNome = 'Neves';
+pessoa.idade = 32;
+
 */
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // armazena o comportamento do botao ao ser pressionado
 var botaoPessoa = document.querySelector("#objetoPessoa");
@@ -1039,6 +1154,8 @@ botaoPessoa.addEventListener('click', function() {
 
 });
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao para mostrar todos os campos da tabela
 function mostrarTabela (objetoPessoa) {
 
@@ -1050,6 +1167,8 @@ function mostrarTabela (objetoPessoa) {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao para mostrar o nome
 function mostrarTabelaNome (objetoPessoa) {
 
@@ -1058,6 +1177,8 @@ function mostrarTabelaNome (objetoPessoa) {
     document.querySelector('#tabelaNome').style.display = 'table';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 // funcao para mostrar o sobrenome
 function mostrarTabelaSobrenome (objetoPessoa) {
@@ -1068,6 +1189,8 @@ function mostrarTabelaSobrenome (objetoPessoa) {
 
 };
 
+/* --------------------------------------------------------------------------------------------------------------- */
+
 // funcao para mostrar a idade
 function mostrarTabelaIdade (objetoPessoa) {
 
@@ -1076,3 +1199,104 @@ function mostrarTabelaIdade (objetoPessoa) {
     document.querySelector('#tabelaIdade').style.display = 'table';
 
 };
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+// definicao de array
+pessoas = [];
+
+// funcao que recebe valores por parametros e insere um objeto em array
+function inserirPessoa (nome, sobrenome, idade) {
+
+    // o push e resposnsavel por adicionar uma pessoa no array
+    pessoas.push({
+
+        // valores passados por parametros que serao inseridos no objeto
+        nome,
+        sobrenome,
+        idade
+
+    });
+
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+// variavel que recebera o comportamento do usuario
+var pessoaObjeto = document.querySelector('#pessoaObjeto');
+
+// estrutura responsavel por escutar a interacao do usuario com a aplicacao
+pessoaObjeto.addEventListener('click', function (Event) {
+
+    // previne o comportamento padrao do JS
+    Event.preventDefault();
+
+    // variavel que recebera todos os valores submetidos pelo formulario
+    var formulario = document.querySelector('#idFormObjeto');
+
+    // condicional que verifica se todos os valores do formulario estao preenchidos
+    if (formulario.nomeObjeto.value != '' && formulario.sobrenomeObjeto.value != '' && formulario.idadeObjeto.value != '') {
+
+        /*
+        // variavel que recebe valores do objeto
+        var pessoa = {
+
+            // associacao de valores as respectivas chaves
+            nome: formulario.nomeObjeto.value,
+            sobrenome: formulario.sobrenomeObjeto.value,
+            idade: formulario.idadeObjeto.value
+
+        };
+
+        // chamada de funcao que insere dados no array
+        inserirPessoa(pessoa.nome, pessoa.sobrenome, pessoa.idade);
+        */
+
+        // chamada de funcao que insere dados no array
+        inserirPessoa(formulario.nomeObjeto.value, formulario.sobrenomeObjeto.value, formulario.idadeObjeto.value);
+
+    } else {
+
+        // mensagem informando que falta preencher valor(es) pelo usuario, com botao para retorno
+        document.write('<h2>Por favor, preencha todos os campos solicitado.</h2>');
+        document.write('<a href="index.html"><button>Volte por aqui</button></a>');
+
+};
+
+    // funcao que limpa valores digitados pelo usuario
+    console.log(pessoas);
+    formulario.reset();
+
+    //
+    var idMostrarLista = document.querySelector('#idMostrarLista');
+
+    idMostrarLista.addEventListener('click', function () {
+
+        criarTabela();
+
+    });
+
+});
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+// funcao para criar tabela
+function criarTabela () {
+
+    var tabela = document.createElement('table');
+    tabela.setAttribute('border', '1');
+
+    return tabela
+
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+//
+function inserirNoIndex (tabela) {
+
+    body.appendChild(tabela);
+
+};
+
+/* --------------------------------------------------------------------------------------------------------------- */
